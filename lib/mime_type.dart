@@ -1,5 +1,5 @@
 library mime_type;
-
+ 
 // get MIME type from file name (returns null if there is no such extension)
 String mime(String fileName) {
   int lastDot = fileName.lastIndexOf('.', fileName.length - 1);
