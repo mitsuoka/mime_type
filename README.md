@@ -24,11 +24,7 @@ sendFile(HttpRequest request, String fileName) {
   HttpResponse response = request.response;
   File file = new File(fileName);
   if (file.existsSync()) {
-<<<<<<< HEAD
     String mimeType = mime(fileName);
-=======
-    String mimeType = `mime(fileName)`;
->>>>>>> 6bb314e2583298e9bc8eb41c609425651de76d9a
     if (mimeType == null) mimeType = 'text/plain; charset=UTF-8';
       // you can change the default content type
       // or, you can choose to send error message

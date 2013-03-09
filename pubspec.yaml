@@ -2,4 +2,4 @@ name: mime_type
 version: 0.1.1
 author: Terry Mitsuoka <TerryMitsuoka@gmail.com>
 description: MIME type library for Dart HTTP server applications.
-homepage: http://www.cresc.co.jp/tech/java/Google_Dart/DartLanguageGuide.pdf
+homepage: https://github.com/mitsuoka/mime_type
