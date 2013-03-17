@@ -6,7 +6,7 @@ When a HTTP server sends a file to the client, MIME type of the file must be set
 
 Only two methods are availabe:
 
-+   String mime(String FileName) //
++   String `mime(String FileName)` //
     gets MIME type from the file name (such as 'Hello.dar't)
  
 +   String `mimeFromExtension(String extension)` //
@@ -41,6 +41,3 @@ sendFile(HttpRequest request, String fileName) {
 
 ## License
 This library is licensed under [MIT License][mit].
-
-
-[MIT]: http://www.opensource.org/licenses/mit-license.php
