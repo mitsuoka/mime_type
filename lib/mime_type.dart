@@ -1,5 +1,5 @@
 library mime_type;
- 
+
 // get MIME type from file name (returns null if there is no such extension)
 String mime(String fileName) {
   int lastDot = fileName.lastIndexOf('.', fileName.length - 1);
@@ -93,6 +93,7 @@ Map _mimeMaps = const {
   'jpg': 'image/jpeg',
   'js': 'text/javascript',
   'jsf': 'text/plain',
+  'json': 'application/json',
   'jspf': 'text/plain',
   'kar': 'audio/x-midi',
   'latex': 'application/x-latex',
