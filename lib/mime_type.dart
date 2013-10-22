@@ -94,6 +94,7 @@ Map _mimeMaps = const {
   'js': 'text/javascript',
   'jsf': 'text/plain',
   'json': 'application/json',
+  'jsonp': 'application/javascript',
   'jspf': 'text/plain',
   'kar': 'audio/x-midi',
   'latex': 'application/x-latex',
