@@ -49,7 +49,7 @@ Map _mimeMaps = const {
   'csh': 'application/x-csh',
   'css': 'text/css',
   'csv': 'text/csv',
-  'dart': 'application/vnd.dart',
+  'dart': 'application/dart',
   'dib': 'image/bmp',
   'doc': 'application/msword',
   'docm': 'application/vnd.ms-word.document.macroEnabled.12',
