@@ -7,7 +7,7 @@ When a HTTP server sends a file to the client, MIME type of the file must be set
 Only two methods are availabe:
 
 +   String `mime(String FileName)` //
-    gets MIME type from the file name (such as 'Hello.dar't)
+    gets MIME type from the file name (such as 'Hello.dart')
  
 +   String `mimeFromExtension(String extension)` //
     gets MIME type from the extension (such as 'dart')
