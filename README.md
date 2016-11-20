@@ -4,7 +4,7 @@ MIME type
 Library to get MIME type from a file name.
 When a HTTP server sends a file to the client, MIME type of the file must be set to the Content-Type header of the response.
 
-Only two methods are availabe:
+Only two methods are available:
 
 +   String `mime(String FileName)` //
     gets MIME type from the file name (such as 'Hello.dart')
