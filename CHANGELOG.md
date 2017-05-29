@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1
+
+- Type woff2 added.
+
 ## 0.2.0
 
 - Included [Apache-types](https://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types).
