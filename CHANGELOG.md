@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.2
+
+- add dart enviroment information
+
 ## 0.2.1
 
 - Type woff2 added.
