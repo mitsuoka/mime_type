@@ -1,5 +1,7 @@
 // Include Apache-types into mime_type.dart
 
+// Jan. 6, 2019  API change ('UTF8' to 'utf8' incorporated)
+
 import 'dart:io';
 import 'dart:convert';
 
@@ -16,7 +18,7 @@ main() {
     return request.close();
   }).then((HttpClientResponse response) {
     // Process the response.
-    response.transform(UTF8.decoder).listen((bodyChunk) {
+    response.transform(utf8.decoder).listen((bodyChunk) {
       bodyStr = bodyStr + bodyChunk;
     }, onDone: () {
       // handle data

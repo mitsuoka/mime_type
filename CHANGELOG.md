@@ -2,7 +2,7 @@
 
 ## 0.2.2
 
-- add dart enviroment information
+- add dart environment information
 
 ## 0.2.1
 

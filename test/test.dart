@@ -21,7 +21,9 @@ List<String> fileList = [
   'Donald Trump.txt',
   'no such extension.abcde',
   'no extension 1.',
-  'no extension 2'
+  'no extension 2',
+  r'c:\filepath.dart',
+  '..Hello.dart'
 ];
 
 List<String> extensionList = [
@@ -57,6 +59,8 @@ mime type for "Donald Trump.txt" is "text/plain"
 mime type for "no such extension.abcde" is "null"
 mime type for "no extension 1." is "null"
 mime type for "no extension 2" is "null"
+mime type for "c:\filepath.dart" is "application/vnd.dart"
+mime type for "..Hello.dart" is "application/vnd.dart"
 mime type for extension "123" is "application/vnd.lotus-1-2-3"
 mime type for extension "zmm" is "application/vnd.handheld-entertainment+xml"
 mime type for extension "abcde" is "null"
