@@ -18,7 +18,7 @@ main() {
     return request.close();
   }).then((HttpClientResponse response) {
     // Process the response.
-    response.transform(utf8.decoder).listen((bodyChunk) {
+    response.cast<List<int>>().transform(utf8.decoder).listen((bodyChunk) {
       bodyStr = bodyStr + bodyChunk;
     }, onDone: () {
       // handle data
