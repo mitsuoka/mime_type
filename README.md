@@ -40,5 +40,4 @@ sendFile(HttpRequest request, String fileName) {
 ```
 
 ## License
-This library is licensed under [MIT License][mit].
-[mit]: http://www.opensource.org/licenses/mit-license.php
+This library is licensed under [MIT License](http://www.opensource.org/licenses/mit-license.php).

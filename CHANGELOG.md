@@ -1,9 +1,13 @@
 # Changelog
 
+
+## 0.2.3
+- forward compatible change in test/apache-types_includer.dart for upcoming SDK change
+
+
 ## 0.2.2
 
-- add dart environment information
-
+ - add dart environment information
 ## 0.2.1
 
 - Type woff2 added.
