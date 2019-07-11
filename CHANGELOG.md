@@ -1,6 +1,9 @@
 # Changelog
 
 
+## 0.2.4
+- prepare for Uint8List SDK breaking change
+
 ## 0.2.3
 - forward compatible change in test/apache-types_includer.dart for upcoming SDK change
 

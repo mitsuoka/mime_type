@@ -1,6 +1,7 @@
 // Include Apache-types into mime_type.dart
 
 // Jan. 6, 2019  API change ('UTF8' to 'utf8' incorporated)
+// July 11, 2019 prepare for Uint8List SDK breaking change
 
 import 'dart:io';
 import 'dart:convert';
