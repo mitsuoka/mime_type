@@ -1,5 +1,7 @@
 # Changelog
 
+## 0.2.5
+- avoid to give false result for JPG files
 
 ## 0.2.4
 - prepare for Uint8List SDK breaking change
