@@ -5,7 +5,7 @@ String mime(String fileName) {
   int lastDot = fileName.lastIndexOf('.', fileName.length - 1);
   if (lastDot != -1) {
     String extension = fileName.substring(lastDot + 1);
-    return _mimeMaps[extension];
+    return _mimeMaps[extension.toLowerCase()];
   } else
     return null;
 }
