@@ -345,6 +345,8 @@ Map _mimeMaps = const {
   'hbci': 'application/vnd.hbci',
   'hdf': 'application/x-hdf',
   'hdml': 'text/x-hdml',
+  'heic': 'image/heic',
+  'heif': 'image/heif',
   'hh': 'text/x-c',
   'hlp': 'application/winhlp',
   'hpgl': 'application/vnd.hp-hpgl',
