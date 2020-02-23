@@ -1,5 +1,7 @@
 # Changelog
 
+## 0.2.6
+- Support for High Efficiency Image File Format
 
 ## 0.2.5
 - avoid to give false result for JPG files
