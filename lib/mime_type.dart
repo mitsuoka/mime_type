@@ -347,6 +347,7 @@ Map _mimeMaps = const {
   'hdml': 'text/x-hdml',
   'heic': 'image/heic',
   'heif': 'image/heif',
+  'hevc': 'video/mp4',
   'hh': 'text/x-c',
   'hlp': 'application/winhlp',
   'hpgl': 'application/vnd.hp-hpgl',

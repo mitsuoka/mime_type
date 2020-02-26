@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.2.7
+- Support for High Efficiency Video Coding
+
 ## 0.2.6
 - Support for High Efficiency Image File Format
 
