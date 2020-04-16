@@ -5,7 +5,7 @@ String mime(String fileName) {
   int lastDot = fileName.lastIndexOf('.', fileName.length - 1);
   if (lastDot != -1) {
     String extension = fileName.substring(lastDot + 1);
-    return _mimeMaps[extension];
+    return _mimeMaps[extension.toLowerCase()];
   } else
     return null;
 }
@@ -353,6 +353,9 @@ Map _mimeMaps = const {
   'hbci': 'application/vnd.hbci',
   'hdf': 'application/x-hdf',
   'hdml': 'text/x-hdml',
+  'heic': 'image/heic',
+  'heif': 'image/heif',
+  'hevc': 'video/mp4',
   'hh': 'text/x-c',
   'hlp': 'application/winhlp',
   'hpgl': 'application/vnd.hp-hpgl',

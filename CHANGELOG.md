@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.7
+- Support for High Efficiency Video Coding
+
+## 0.2.6
+- Support for High Efficiency Image File Format
+
+## 0.2.5
+- avoid to give false result for JPG files
 
 ## 0.2.4
 - prepare for Uint8List SDK breaking change
@@ -7,12 +15,10 @@
 ## 0.2.3
 - forward compatible change in test/apache-types_includer.dart for upcoming SDK change
 
-
 ## 0.2.2
-
- - add dart environment information
+- add dart environment information
+ 
 ## 0.2.1
-
 - Type woff2 added.
 
 ## 0.2.0
