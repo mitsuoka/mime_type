@@ -13,10 +13,12 @@ String mime(String fileName) {
 // get MIME type from extension (returns null if there is no such extension)
 String mimeFromExtension(String extension) => _mimeMaps[extension];
 
-// get extension from MIME type (returns null if there is no such mime)
+// gets extension from MIME type (returns null if there is no such mime type)
 String extensionFromMime(String mime) {
   for (final key in _mimeMaps.keys) {
-    if (_mimeMaps[key] == mime) return key;
+    if (_mimeMaps[key] == mime.toLowerCase()) {
+      return key;
+    }
   }
   return null;
 }

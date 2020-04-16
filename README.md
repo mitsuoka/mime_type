@@ -1,18 +1,21 @@
 MIME type
 ==
 
-Library to get MIME type from a file name or a file path.
+Library to get MIME type from a file name or a file path and get the file extension from a MIME type.
 When a HTTP server sends a file to the client, MIME type of the file must be set to the Content-Type header of the response.
 
-Only two methods are available:
+Only three methods are available:
 
 +   String `mime(String FileName)` //
     gets the MIME type from a file name (such as 'Hello.dart') or a file path (such as '..\Hello.dart').
  
 +   String `mimeFromExtension(String extension)` //
     gets the MIME type from an extension (such as 'dart')
+    
++   String `extensionFromMime(String mime)` //
+    gets extension from MIME type (returns null if there is no such mime type)
 
-Both methods return null If MIME type for the file is not available.
+All methods return null if they cannot find a match.
 
 ## Example
 
