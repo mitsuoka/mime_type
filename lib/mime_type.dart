@@ -13,6 +13,16 @@ String mime(String fileName) {
 // get MIME type from extension (returns null if there is no such extension)
 String mimeFromExtension(String extension) => _mimeMaps[extension];
 
+// gets extension from MIME type (returns null if there is no such mime type)
+String extensionFromMime(String mime) {
+  for (final key in _mimeMaps.keys) {
+    if (_mimeMaps[key] == mime.toLowerCase()) {
+      return key;
+    }
+  }
+  return null;
+}
+
 // default MIME type mappings
 Map _mimeMaps = const {
   '123': 'application/vnd.lotus-1-2-3',
