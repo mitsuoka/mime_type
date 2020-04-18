@@ -32,12 +32,21 @@ List<String> extensionList = [
   'abcde'
 ];
 
+List<String> mime_typeList = [
+  'Franklin D. Roosevelt.dart',
+  'audio/x-mpeg',
+  'application/rtf'
+];
+
 main() {
   for (String file in fileList) {
     print('mime type for "$file" is "${mime(file)}"');
   }
   for (String ext in extensionList) {
     print('mime type for extension "$ext" is "${mimeFromExtension(ext)}"');
+  }
+  for (String mime in mime_typeList){
+    print('extension for mime "$mime" is "${extensionFromMime(mime)}"');
   }
 }
 
@@ -64,4 +73,7 @@ mime type for "..Hello.dart" is "application/vnd.dart"
 mime type for extension "123" is "application/vnd.lotus-1-2-3"
 mime type for extension "zmm" is "application/vnd.handheld-entertainment+xml"
 mime type for extension "abcde" is "null"
+extension for mime "Franklin D. Roosevelt.dart" is "null"
+extension for mime "audio/x-mpeg" is "abs"
+extension for mime "application/rtf" is "rtf"
  */
