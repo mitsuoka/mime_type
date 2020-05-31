@@ -1,7 +1,9 @@
 # Changelog
 
-## 0.3.0
+## 0.3.1
+- Check null or empty filename to avoid crash.
 
+## 0.3.0
 - Added `extensionFromMime` function to get an extension given a mime type.
 
 ## 0.2.7
