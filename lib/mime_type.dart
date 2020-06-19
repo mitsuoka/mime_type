@@ -1,15 +1,20 @@
 library mime_type;
 
+import 'dart:collection';
+
 // get MIME type from file name (returns null if there is no such extension)
 String mime(String fileName) {
-  if(fileName==null || fileName.trim().isEmpty) return null;
-  
-  int lastDot = fileName.lastIndexOf('.', fileName.length - 1);
-  if (lastDot != -1) {
-    String extension = fileName.substring(lastDot + 1);
-    return _mimeMaps[extension.toLowerCase()];
-  } else
+  if (fileName == null || fileName.trim().isEmpty) {
     return null;
+  }
+
+  final int lastDot = fileName.lastIndexOf('.', fileName.length - 1);
+  if (lastDot != -1) {
+    final String extension = fileName.substring(lastDot + 1);
+    return _mimeMaps[extension.toLowerCase()];
+  } else {
+    return null;
+  }
 }
 
 // get MIME type from extension (returns null if there is no such extension)
@@ -25,8 +30,11 @@ String extensionFromMime(String mime) {
   return null;
 }
 
+// hash maps much faster
+HashMap<String, String> _mimeMaps = HashMap<String, String>.from(_mimeMap);
+
 // default MIME type mappings
-Map _mimeMaps = const {
+const Map<String, String> _mimeMap = <String, String>{
   '123': 'application/vnd.lotus-1-2-3',
   '3dml': 'text/vnd.in3d.3dml',
   '3ds': 'image/x-3ds',
