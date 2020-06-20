@@ -1,15 +1,20 @@
 library mime_type;
 
+import 'dart:collection';
+
 // get MIME type from file name (returns null if there is no such extension)
 String mime(String fileName) {
-  if(fileName==null || fileName.trim().isEmpty) return null;
-  
-  int lastDot = fileName.lastIndexOf('.', fileName.length - 1);
-  if (lastDot != -1) {
-    String extension = fileName.substring(lastDot + 1);
-    return _mimeMaps[extension.toLowerCase()];
-  } else
+  if (fileName == null || fileName.trim().isEmpty) {
     return null;
+  }
+
+  final int lastDot = fileName.lastIndexOf('.', fileName.length - 1);
+  if (lastDot != -1) {
+    final String extension = fileName.substring(lastDot + 1);
+    return _mimeMaps[extension.toLowerCase()];
+  } else {
+    return null;
+  }
 }
 
 // get MIME type from extension (returns null if there is no such extension)
@@ -25,8 +30,11 @@ String extensionFromMime(String mime) {
   return null;
 }
 
+// hash maps much faster
+HashMap<String, String> _mimeMaps = HashMap<String, String>.from(_mimeMap);
+
 // default MIME type mappings
-Map _mimeMaps = const {
+const Map<String, String> _mimeMap = <String, String>{
   '123': 'application/vnd.lotus-1-2-3',
   '3dml': 'text/vnd.in3d.3dml',
   '3ds': 'image/x-3ds',
@@ -184,7 +192,7 @@ Map _mimeMaps = const {
   'cxx': 'text/x-c',
   'dae': 'model/vnd.collada+xml',
   'daf': 'application/vnd.mobius.daf',
-  'dart': 'application/vnd.dart',
+  'dart': 'text/x-dart',
   'dataless': 'application/vnd.fdsn.seed',
   'davmount': 'application/davmount+xml',
   'dbk': 'application/docbook+xml',
@@ -325,6 +333,8 @@ Map _mimeMaps = const {
   'ghf': 'application/vnd.groove-help',
   'gif': 'image/gif',
   'gim': 'application/vnd.groove-identity-message',
+  'glb': 'model/gltf-binary',
+  'gltf': 'model/gltf+json',
   'gml': 'application/gml+xml',
   'gmx': 'application/vnd.gmx',
   'gnumeric': 'application/x-gnumeric',
@@ -964,6 +974,7 @@ Map _mimeMaps = const {
   'w3d': 'application/x-director',
   'wad': 'application/x-doom',
   'war': 'application/java-archive',
+  'wasm': 'application/wasm',
   'wav': 'audio/x-wav',
   'wax': 'audio/x-ms-wax',
   'wbmp': 'image/vnd.wap.wbmp',
@@ -990,8 +1001,8 @@ Map _mimeMaps = const {
   'wmlscriptc': 'application/vnd.wap.wmlscriptc',
   'wmv': 'video/x-ms-wmv',
   'wmx': 'video/x-ms-wmx',
-  'wmz': 'application/x-msmetafile',
-  'woff': 'application/font-woff',
+  'wmz': 'application/x-ms-wmz',
+  'woff': 'application/x-font-woff',
   'woff2': 'application/font-woff2',
   'wpd': 'application/vnd.wordperfect',
   'wpl': 'application/vnd.ms-wpl',
