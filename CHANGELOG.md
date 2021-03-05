@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.3.2
+- Hashmap speedup and updated types.
+
 ## 0.3.1
 - Check null or empty filename to avoid crash.
 
