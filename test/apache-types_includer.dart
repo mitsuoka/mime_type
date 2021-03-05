@@ -1,27 +1,26 @@
 // Include Apache-types into mime_type.dart
 
+import 'dart:convert';
+
 // Jan. 6, 2019  API change ('UTF8' to 'utf8' incorporated)
 // July 11, 2019 prepare for Uint8List SDK breaking change
 
 import 'dart:io';
-import 'dart:convert';
 
-final String URL =
-    'https://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types';
-String bodyStr;
+final String URL = 'https://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types';
+String bodyStr = '';
 Map mimeMap = {}, sortedMimeMap = {};
-Map oldMimeMap;
+Map oldMimeMap = {};
 
 main() {
   HttpClient client = new HttpClient();
   bodyStr = '';
-  client.getUrl(Uri.parse(URL)).then((HttpClientRequest request) {
-    return request.close();
-  }).then((HttpClientResponse response) {
+  client
+      .getUrl(Uri.parse(URL))
+      .then((HttpClientRequest request) => request.close())
+      .then((HttpClientResponse response) {
     // Process the response.
-    utf8.decoder.bind(response).listen((bodyChunk) {
-      bodyStr = bodyStr + bodyChunk;
-    }, onDone: () {
+    utf8.decoder.bind(response).listen((bodyChunk) => bodyStr += bodyChunk, onDone: () {
       // handle data
       //    print('***headers***\n${response.headers}');
       //    print('***bodyString***\n$bodyStr');
@@ -34,13 +33,12 @@ parseBodyStr(String bodyStr) {
   setOldMimeMap();
   mimeMap.addAll(oldMimeMap);
   //line regExp
-  RegExp lineExp =
-      new RegExp(r'^([\w-]+\/[\w+.-]+)((?:\s+[\w-]+)*)$', multiLine: true);
+  RegExp lineExp = new RegExp(r'^([\w-]+/[\w+.-]+)((?:\s+[\w-]+)*)$', multiLine: true);
   RegExp extensionExp = new RegExp(r'\s+');
   Iterable<Match> matches = lineExp.allMatches(bodyStr);
   for (Match m in matches) {
-    String mimeType = m.group(1);
-    List<String> extensions = m.group(2).trimLeft().split(extensionExp);
+    String mimeType = m.group(1)!;
+    List<String> extensions = m.group(2)!.trimLeft().split(extensionExp);
     // print('mimeType : $mimeType, extensions = $extensions');
     for (String extension in extensions) {
       mimeMap.addAll({extension: mimeType});
@@ -101,12 +99,10 @@ setOldMimeMap() {
     'doc': 'application/msword',
     'docm': 'application/vnd.ms-word.document.macroEnabled.12',
     'docs': 'application/vnd.google-apps.document',
-    'docx':
-        'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+    'docx': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
     'dot': 'application/msword',
     'dotm': 'application/vnd.ms-word.template.macroEnabled.12',
-    'dotx':
-        'application/vnd.openxmlformats-officedocument.wordprocessingml.template',
+    'dotx': 'application/vnd.openxmlformats-officedocument.wordprocessingml.template',
     'dtd': 'application/xml-dtd',
     'dv': 'video/x-dv',
     'dvi': 'application/x-dvi',
@@ -223,12 +219,9 @@ setOldMimeMap() {
     'pot': 'application/vnd.ms-powerpoint',
     'pps': 'application/vnd.ms-powerpoint',
     'ppa': 'application/vnd.ms-powerpoint',
-    'pptx':
-        'application/vnd.openxmlformats-officedocument.presentationml.presentation',
-    'potx':
-        'application/vnd.openxmlformats-officedocument.presentationml.template',
-    'ppsx':
-        'application/vnd.openxmlformats-officedocument.presentationml.slideshow',
+    'pptx': 'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+    'potx': 'application/vnd.openxmlformats-officedocument.presentationml.template',
+    'ppsx': 'application/vnd.openxmlformats-officedocument.presentationml.slideshow',
     'ppam': 'application/vnd.ms-powerpoint.addin.macroEnabled.12',
     'pptm': 'application/vnd.ms-powerpoint.presentation.macroEnabled.12',
     'potm': 'application/vnd.ms-powerpoint.template.macroEnabled.12',
@@ -307,8 +300,7 @@ setOldMimeMap() {
     'xlt': 'application/vnd.ms-excel',
     'xla': 'application/vnd.ms-excel',
     'xlsx': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
-    'xltx':
-        'application/vnd.openxmlformats-officedocument.spreadsheetml.template',
+    'xltx': 'application/vnd.openxmlformats-officedocument.spreadsheetml.template',
     'xlsm': 'application/vnd.ms-excel.sheet.macroEnabled.12',
     'xltm': 'application/vnd.ms-excel.template.macroEnabled.12',
     'xlam': 'application/vnd.ms-excel.addin.macroEnabled.12',
