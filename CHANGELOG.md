@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.0
+- Null safety version of version 0.3.2
+
 ## 0.3.2
 - Hashmap speedup and updated types.
 
