@@ -517,6 +517,7 @@ const Map<String, String> _mimeMap = <String, String>{
   'mime': 'message/rfc822',
   'mj2': 'video/mj2',
   'mjp2': 'video/mj2',
+  'mjs': 'application/javascript',
   'mk3d': 'video/x-matroska',
   'mka': 'audio/x-matroska',
   'mkd': 'text/x-web-markdown',
