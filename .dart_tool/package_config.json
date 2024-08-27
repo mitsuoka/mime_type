@@ -1,0 +1,17 @@
+{
+  "configVersion": 2,
+  "packages": [
+    {
+      "name": "mime_type",
+      "rootUri": "../",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    }
+  ],
+  "generated": "2024-08-27T21:58:36.864956Z",
+  "generator": "pub",
+  "generatorVersion": "3.4.1",
+  "flutterRoot": "file:///usr/lib/flutter",
+  "flutterVersion": "3.22.1",
+  "pubCache": "file:///home/molkie/.pub-cache"
+}
